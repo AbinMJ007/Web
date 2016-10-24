@@ -62,8 +62,10 @@ div.middle {
 	border: 0px;
 	border-radius: 15px; 
 	margin-left:500px;
-	margin-right:500px;
-
+	margin-right:300px;
+	right:50px;
+	position: absolute; 
+	top: -15px;
 	text-align:center;
 	background-color: rgb(150,150,150);
 }

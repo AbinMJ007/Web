@@ -17,7 +17,9 @@
 </div>
 <div class ="middle">
 <h1 class="he"> It's Time to Create Your Graph </h1>
-<div class="b"><p class ="button">upload a file</p></div>
+<div class="b" style="position: relative;"><p class ="button">upload a file</p>
+<input  class ="button" type="file" name="myfile" value="upload" style="opacity: 0;">
+</div>
 	
 </div>
 <div style="position:absolute; top:600px; left:400px; width:500px; height:500px;">
@@ -29,7 +31,7 @@ var options = {
     maintainAspectRatio: false
 }
 var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'doughnut',
     data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [{
