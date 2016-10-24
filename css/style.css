@@ -51,7 +51,7 @@ div.middle {
 	font-family: Herculanum;
 }
 .b {
-	 margin-right: 30px;
+	 margin-right: 20px;
 	 margin-top: 80px;
 
 }
@@ -62,8 +62,8 @@ div.middle {
 	border: 0px;
 	border-radius: 15px; 
 	margin-left:500px;
-	margin-right:300px;
-	right:50px;
+	margin-right:400px;
+	/*right:150px;*/
 	position: absolute; 
 	top: -15px;
 	text-align:center;
