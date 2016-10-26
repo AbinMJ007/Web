@@ -4,14 +4,15 @@
 	<title>Create a Graph</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/Chart.js"></script>
+    <script src="https://use.fontawesome.com/87d9733b98.js"></script>
 </head>
 <body>
 
-<div class="top">
 
-<h1 class="header">CREATE A GRAPH</h1>
+<div class="top">
+<h1 class="header"><i class="fa fa-area-chart" aria-hidden="true"></i>CREATE A GRAPH</h1>
 <ul class="hlist">
-	<li> <a href="re.html">home </a></li>
+	<li> <a href="index.html">home </a></li>
 	<li> <a href="about.html" target="_self">about us </a></li>
 </ul>
 </div>
@@ -19,10 +20,11 @@
 <h1 class="he"> It's Time to Create Your Graph </h1>
 <div class="b" style="position: relative;"><p class ="button">upload a file</p>
 <input  class ="button" type="file" name="myfile" value="upload" style="opacity: 0;">
+<a  class = "file" href="input.html">Enter an input</a> 
 </div>
 	
 </div>
-<div style="position:absolute; top:600px; left:400px; width:500px; height:500px;">
+<div style="position:absolute; top:600px; left:400px; width:500px; height:500px;color:white">
 <canvas id="myChart"></canvas>
 <script>
 var ctx = document.getElementById("myChart").getContext("2d");
@@ -31,7 +33,7 @@ var options = {
     maintainAspectRatio: false
 }
 var myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [{
