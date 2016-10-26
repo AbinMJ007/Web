@@ -23,6 +23,7 @@
     overflow: hidden;
     background-color: #333333;
     width: 100%;
+    display: inline-block;
     
 }
 body {
