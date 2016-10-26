@@ -1,13 +1,15 @@
-$.getJSON("data.json", function (json) {
+$.getJSON("js/data.json", function (json) {
 
-	var labels = json.map(function(item){
+	/*var labels = json.map(function(item){
 		return item.label;
 	});
 	var values = json.map(function(val){
 		return val.value;
 
-	});
+	});*/
 
+	var lab1 = ["aman","abin"];
+	var val1 = [50,80];
 	var options = {
 		responsive : true,
 		maintainAspectRatio : false,
@@ -16,15 +18,6 @@ $.getJSON("data.json", function (json) {
 				ticks:{
 					beginAtZero: true
 				}
-			}],
-			xAxes : [{
-				ticks:{
-					beginAtZero: true
-				},
-				scale:{
-				fontColor: "rgb(120,12,123)"
-			},
-
 			}]
 		},
 		legend: {
@@ -32,19 +25,16 @@ $.getJSON("data.json", function (json) {
 				fontColor:"rgb(255,99,132)"
 			}
 			
-		},
-		tooltips: {
-			titleFontColor: "rgb(123,123,123)"
 		}
 
 	};
 
 	var data = {
-		labels : labels,
+		labels : lab1,
 		datasets : [{
 			label: "Project",
-			data: values,
-			strokeColor: 'rgba(100,124,122,1)',
+			data: val1,
+			//strokeColor: 'rgba(100,124,122,1)',
 			backgroundColor: [
 				'rgba(255,0,0,0)',
 				'rgba(0,255,0,0)',

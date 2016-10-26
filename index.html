@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/Chart.js"></script>
     <script src="js/chart_icon.js"></script>
+    <script src="js/chart.bundle.js"></script>
+    <script src="js/jquery.min.js"></script>
 </head>
 <body>
 
@@ -24,10 +26,10 @@
 </div>
 	
 </div>
-<div style="position:absolute; top:600px; left:400px; width:500px; height:500px;color:white">
+<div style="position:absolute; top:600px; left:400px; width:500px; height:350px;background-color:white">
 <canvas id="myChart"></canvas>
-<script>
-var ctx = document.getElementById("myChart").getContext("2d");
+<script type="text/javascript" src="js/rand_chart.js">
+/*var ctx = document.getElementById("myChart").getContext("2d");
 var options = { 
     responsive: true,
     maintainAspectRatio: false
@@ -67,10 +69,10 @@ var myChart = new Chart(ctx, {
             }]
         }
     }
-}, options);
+}, options);*/
 </script>
 </div>
 
-<footer>BY AAAA PRODUCTIONS &#169; <sub style="font-size:10px;">rights reserved</sub></footer>
+<div class="footer"><footer>BY AAAA PRODUCTIONS &#169; <sub style="font-size:10px;">rights reserved</sub></footer></div>
 </body>
 </html>
