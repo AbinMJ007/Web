@@ -74,6 +74,24 @@ div.middle {
 	font-size: 20px;
 	margin-left: 50px;
 }
+#dat{
+	
+	margin:5px;
+	margin-bottom: 25px;
+	margin-right: 20px;
+
+}
+span {
+	font-family:Herculanum;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	font-size: 25px; 
+
+}
+#member {
+	margin-bottom: 30px;
+}
+
 
 
 input {
@@ -94,4 +112,7 @@ footer{
 	padding: 18px;
 	font-size: 20px;
 	font-family:Herculanum;
+}
+.foot {
+	margin-top: 75px;
 }
