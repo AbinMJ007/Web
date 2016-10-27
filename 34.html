@@ -1,29 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Input DATA</title>
+	<title>java</title>
 	<link rel="stylesheet" type="text/css" href="css/style1.css">
-
 </head>
-<body >
-	<div class="top">
-
-		<h1 class="header">INPUT DATA</h1>
-		<ul class="hlist">
-			<li> <a href="index.html">home </a></li>
-			<li> <a href="about.html" target="_self">about us </a></li>
-		</ul>
-	</div>
-	<div class="mid">
-		<h1 class="he">Enter Data fast!!!!</h1>	
-		<span>Enter the no. of fields:</span><input type="text" id="member" name="member" placeholder=" Enter the value" value="" onkeydown="if (event.keyCode == 13) { addFields();}"><br/>
+<body>
+<span>Enter the no. of fields:</span><input type="text" id="member" name="member" placeholder=" Enter the value" value="" onkeydown="if (event.keyCode == 13) { addFields();}"><br/>
 		<!--<a href="#" id="filldetails" onclick="addFields()">Fill Details</a> -->
 		<div id="container"/>
-		<form name="mine" action=" ">
-    <script type="text/javascript">
-    	 var lab = [];
-		 var val = [];
-		 var count = 0;
+		<!--<div id="btn"><input type="button" value="generate" onclick=getData() /></div>-->
+
+<script type="text/javascript" >
+	var lab = [];
+	var val = [];
+	var count = 0;
 	    	function getData()
     	 	{
     	 		
@@ -79,8 +69,6 @@ function addFields(){
             }
             var par = document.createElement("input");
             par.type="button";
-            par.value="GenerateTheGraph";
-            par.id="gen";
 
             par.onclick= function() {
             	getData();
@@ -90,13 +78,10 @@ function addFields(){
 
           
 }
-    </script>
-    </form>
-    
 
-	</div>
-	<br/>
-	<div class="foot">
-<footer>BY AAAA PRODUCTIONS &#169; <sub style="font-size:10px;">rights reserved</sub></footer></div>
+</script>
+<input type="button" value="generate" onclick=getData() id="btn" >
+
+	<!--<input type="button" value="generate" onclick=getData() id="btn" />-->
 </body>
 </html>

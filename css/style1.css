@@ -74,11 +74,40 @@ div.middle {
 	font-size: 20px;
 	margin-left: 50px;
 }
-#dat{
+#gen {
+	background-color:white; /* Green */
+    border:2px solid #black;
+    font-family: Arial, Helvetica, sans-serif; 
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left:100px;
+    -webkit-transition-duration: 7.4s; /* Safari */
+    transition-duration: 2.4s;
+    cursor: pointer;
+}
+#gen:hover{
+	background-color:black;
+	color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.lab{
 	
 	margin:5px;
 	margin-bottom: 25px;
 	margin-right: 20px;
+	
+
+}
+.val{
+	
+	margin:5px;
+	margin-bottom: 25px;
+	margin-right: 20px;
+	
 
 }
 span {
@@ -101,6 +130,13 @@ input {
 	width: 280px;
 	font-size: 15px;
 }
+#container
+{
+	font-family:Herculanum;
+	margin: 10px;
+	font-size: 20px;
+ 
+}
 .he {
 	font-size: 40px;
 	font-family:Herculanum;
@@ -115,4 +151,8 @@ footer{
 }
 .foot {
 	margin-top: 75px;
+}
+#btn{
+	/*visibility: hidden;*/
+	display: none;
 }
