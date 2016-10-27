@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>java</title>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+</head>
+<body>
+<span>Enter the no. of fields:</span><input type="text" id="member" name="member" placeholder=" Enter the value" value="" onkeydown="if (event.keyCode == 13) { addFields();}"><br/>
+		<!--<a href="#" id="filldetails" onclick="addFields()">Fill Details</a> -->
+		<div id="container"/>
+		<!--<div id="btn"><input type="button" value="generate" onclick=getData() /></div>-->
+
+<script type="text/javascript" >
+	var lab = [];
+	var val = [];
+    var obj = {};
+	var count = 0;
+	    	function getData()
+    	 	{
+                var elem = document.getElementsByClassName('lab');
+                for (var i = 0; i < elem.length; i++) {
+                    if (typeof elem[i].value !== "undefined") {
+                            lab.push(elem[i].value);
+                    }
+                } 
+                var dat = document.getElementsByClassName('val');
+                for (var i = 0; i < dat.length; i++) {
+                    if (typeof dat[i].value !== "undefined") {
+                            val.push(parseInt(dat[i].value));
+                    }
+                } 
+
+                
+                for(var i =0; i < lab.length; i++)
+                {
+                    obj[lab[i]] = val[i];
+                }
+
+                obj = JSON.stringify(obj);
+                obj = btoa(obj);
+                localStorage.setItem('_obj', obj);
+
+
+
+    	 	}
+    	 	
+function addFields(){
+
+
+            var number = document.getElementById("member").value;
+            var container = document.getElementById("container");
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<number;i++){
+            	
+                container.appendChild(document.createTextNode(" Label "+ (i+1)+" :"));
+
+                var label = document.createElement("input");
+                label.type = "text";
+                label.className="lab";
+                label.name="la";
+                
+
+                label.placeholder="Enter the label";
+                container.appendChild(label);
+                 container.appendChild(document.createTextNode("Value " + (i+1)+" :"));
+                 var value = document.createElement("input");
+                value.type = "number";
+                value.className="val";
+                value.name="cl";
+                value.placeholder="Enter the value";
+                container.appendChild(value);
+                container.appendChild(document.createElement("br"));
+                var name_element = document.getElementById('lab');
+                var value_element = document.getElementById('val');
+                //document.write(name_element.value);
+                
+            }
+            var par = document.createElement("input");
+            par.type = "button";
+            par.onclick = function(){
+                getData();
+            }
+            par.value = "Generate";
+            container.appendChild(par);
+
+
+            
+
+}
+
+</script>
+
+	<!--<input type="button" value="generate" onclick=getData() id="btn" />-->
+</body>
+</html>

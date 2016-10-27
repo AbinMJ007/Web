@@ -8,8 +8,8 @@ $.getJSON("js/data.json", function (json) {
 
 	});*/
 
-	var lab1 = ["aman","abin"];
-	var val1 = [50,80];
+	//var lab1 = ["aman","abin"];
+	//var val1 = [50,80];
 	var options = {
 		responsive : true,
 		maintainAspectRatio : false,
@@ -30,10 +30,10 @@ $.getJSON("js/data.json", function (json) {
 	};
 
 	var data = {
-		labels : lab1,
+		labels : lab,
 		datasets : [{
 			label: "Project",
-			data: val1,
+			data: val,
 			//strokeColor: 'rgba(100,124,122,1)',
 			backgroundColor: [
 				'rgba(255,0,0,0)',

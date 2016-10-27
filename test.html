@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/Chart.js"></script>
+    <script src="js/chart_icon.js"></script>
+    <script src="js/chart.bundle.js"></script>
+    <script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+	<div style="position:absolute; top:600px; left:400px; width:500px; height:350px;background-color:white">
+   <canvas id="myChart"></canvas></div>
+	<script type="text/javascript" >
+		var obj = localStorage.getItem('_obj');
+		obj = atob(obj);
+		obj = JSON.parse(obj);
+		var lab = Object.keys(obj);
+		var val = Object.values(obj);
+	</script>
+	<script type="text/javascript" src="js/render_chart.js"></script>
+</body>
+</html>
