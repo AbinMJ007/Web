@@ -13,6 +13,13 @@
 
 			function render_chart(str)
 			{
+			var canvas = document.getElementById('myChart');
+			canvas.remove();
+			var container = document.getElementById("canv");
+			var can = document.createElement('canvas');
+			can.id = 'myChart';
+			container.appendChild(can);
+			ctx = document.getElementById('myChart').getContext('2d');
 			var myBarChart = new Chart(ctx, {
     		type: str,
     		data: data,
@@ -74,3 +81,6 @@ var myBarChart = new Chart(ctx, {
     
   });
 
+// setInterval(function(){
+// 	window.localStorage.clear();
+// },5000);
