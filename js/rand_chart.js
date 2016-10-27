@@ -3,7 +3,9 @@ var dData = function() {
 };
 
 var temp = 0;
-var type = ["polarArea","line","bar"];
+var type = ["bar","line"];
+var count = 0;
+var myBarChart;
 
 var dat = [dData(), dData(), dData(), dData(),
            dData(), dData(), dData(), dData()];
@@ -15,7 +17,20 @@ var chartData = {
   datasets: [{
    // fillColor: 'rgba(0,60,100,1)',
     strokeColor: 'black',
-    data: dat
+    data: dat,
+    borderColor: [
+        'rgba(0,0,0,0.5)',
+        'rgba(0,0,0,0.5)',
+        'rgba(0,0,0,0.5)',
+        'rgba(0,0,0,0.5)',
+        'rgba(0,0,0,0.5)',
+        'rgba(0,0,0,0.5)',
+        'rgba(0,0,0,0.5)',
+        'rgba(0,0,0,0.5)',
+       
+      ],
+      borderWidth: 3
+
   }]
 }
 
@@ -28,31 +43,52 @@ function removeData(){
 }
 
 function addData(){
-	dat.push(dData());
+	count++;
+  dat.push(dData());
 	lab.push('dD'+index)
-	
-	var myBarChart = new Chart(ctx, {
+  if(count%6 == 0){
+  if(!temp)
+    temp = 1;
+  else
+    temp=0;
+  myBarChart = new Chart(ctx, {
     type: type[temp],
     data: chartData,
     options:options
     
   });
-	//myBarChart.update();
-	if(!temp)
-		temp = 1;
-	else
-		temp=0;
+}
+ 
+ 
+  myBarChart.update();
+
 }
 
-var myBarChart = new Chart(ctx, {
+ myBarChart = new Chart(ctx, {
     type: type[temp],
     data: chartData,
     options:options
     
   });
 var options = {
-		responsive : true,
-	};
+    responsive : true,
+    maintainAspectRatio : false,
+    scales: {
+      yAxes:[{
+        ticks:{
+          beginAtZero: true,
+          fontcolor:"rgb(255,0,0)"
+        }
+      }]
+    },
+    legend: {
+      labels:{
+        fontColor:"rgb(0,0,255)"
+      }
+      
+    }
+
+  };
 
 var index = 9;
 
@@ -63,9 +99,9 @@ setInterval(function() {
   myBarChart.update();
   index++;
   var myBarChart = new Chart(ctx, {
-    type: type[temp++],
+    type: type[temp],
     data: chartData,
     options:options
     
   });
-}, 1000);
+}, 500);

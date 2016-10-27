@@ -1,4 +1,4 @@
-$.getJSON("js/data.json", function (json) {
+
 
 	/*var labels = json.map(function(item){
 		return item.label;
@@ -10,6 +10,16 @@ $.getJSON("js/data.json", function (json) {
 
 	//var lab1 = ["aman","abin"];
 	//var val1 = [50,80];
+
+			function render_chart(str)
+			{
+			var myBarChart = new Chart(ctx, {
+    		type: str,
+    		data: data,
+    		options:options
+    
+  				});
+			}
 	var options = {
 		responsive : true,
 		maintainAspectRatio : false,
@@ -63,4 +73,4 @@ var myBarChart = new Chart(ctx, {
     options:options
     
   });
-});
+

@@ -1,8 +1,12 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <head>
 	<title>The Graph</title>
 	<link rel="stylesheet" type="text/css" href="css/style2.css">
+	<script src="js/Chart.js"></script>
+    <script src="js/chart_icon.js"></script>
+    <script src="js/chart.bundle.js"></script>
+    <script src="js/jquery.min.js"></script>
 
 </head>
 <body >
@@ -18,10 +22,30 @@
     <div class="middle">
         <h1 class="he">Your Graph !</h1>
     </div>
-	
-	<br/>
 
-<div style = "height: 30px"></div>
+
+    <div style="position:absolute; top:450px; left:340px; width:500px; height:350px;background-color:white;">
+   <canvas id="myChart"></canvas></div>
+	<script type="text/javascript" >
+		var obj = localStorage.getItem('_obj');
+		obj = atob(obj);
+		obj = JSON.parse(obj);
+		var lab = Object.keys(obj);
+		var val = Object.values(obj);
+
+	</script>
+	<script type="text/javascript" src="js/render_chart.js"></script>
+	    <div class="gra">
+    	<ul>
+ 		 <li id="g" ><button onclick="render_chart('bar')" class="graph"><b>Bar</b></button></li>
+		<li id="g" ><button onclick="render_chart('line')" class="graph"><b>line</b></button></li>
+  		<li id="g"  ><button onclick="render_chart('doughnut')" class="graph"><b>DoughNut</b></button></li>
+ 		 <li id="g" ><button onclick="render_chart('polarArea')" class="graph"><b>Polar Area</b></button></li>
+		</ul>
+    </div>
+	
+
+<div style="height:500px;"></div>
 <div class=footer><footer>BY AAAA PRODUCTIONS &#169; <sub style="font-size:10px;">rights reserved</sub></footer></div>
 </body>
 </html>

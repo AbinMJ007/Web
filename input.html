@@ -23,6 +23,7 @@
     <script type="text/javascript">
     	 var lab = [];
 		 var val = [];
+		 var obj = {};
 		 var count = 0;
 	    	function getData()
     	 	{
@@ -43,6 +44,14 @@
                 		
                 	}
                 }
+                for(var i =0; i < lab.length; i++)
+                {
+                    obj[lab[i]] = val[i];
+                }
+                obj = JSON.stringify(obj);
+                obj = btoa(obj);
+                localStorage.setItem('_obj', obj);
+
 
     	 	}
     	 	
@@ -84,6 +93,8 @@ function addFields(){
 
             par.onclick= function() {
             	getData();
+            	location.replace("../graph/graph.html");
+
             } 
             par.val= "Generate";
             container.appendChild(par); 
@@ -96,6 +107,7 @@ function addFields(){
 
 	</div>
 	<br/>
+	<div style ="height: 200px;"></div>
 	<div class="foot">
 <footer>BY AAAA PRODUCTIONS &#169; <sub style="font-size:10px;">rights reserved</sub></footer></div>
 </body>

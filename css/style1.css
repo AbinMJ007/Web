@@ -79,7 +79,8 @@ div.middle {
     border:2px solid #black;
     font-family: Arial, Helvetica, sans-serif; 
     color: black;
-    padding: 5px;
+    padding: 20px;
+    padding-bottom:30px; 
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -88,6 +89,8 @@ div.middle {
     -webkit-transition-duration: 7.4s; /* Safari */
     transition-duration: 2.4s;
     cursor: pointer;
+    margin-top: 50px;
+    margin-left: 410px;
 }
 #gen:hover{
 	background-color:black;
